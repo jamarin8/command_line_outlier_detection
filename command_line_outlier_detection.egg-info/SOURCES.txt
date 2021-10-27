@@ -1,0 +1,8 @@
+README.md
+setup.py
+command_line_outlier_detection/__init__.py
+command_line_outlier_detection/features.py
+command_line_outlier_detection.egg-info/PKG-INFO
+command_line_outlier_detection.egg-info/SOURCES.txt
+command_line_outlier_detection.egg-info/dependency_links.txt
+command_line_outlier_detection.egg-info/top_level.txt
