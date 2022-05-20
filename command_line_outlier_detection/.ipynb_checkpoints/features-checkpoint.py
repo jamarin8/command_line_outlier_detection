@@ -1,4 +1,3 @@
-categorical_vars = cat_vars + bool_vars
 
 cat_vars = [
  'ida_bankcard_idscoreresultcode1',
@@ -204,6 +203,8 @@ bool_vars = [
  'na_vacancy',
  'na_prison'
 ]
+
+categorical_vars = cat_vars + bool_vars
 
 all_date_vars = ['fd_first_decision_time',
  'vsd_entered_ver_time',

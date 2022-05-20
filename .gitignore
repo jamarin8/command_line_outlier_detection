@@ -1,0 +1,6 @@
+.venv
+.venv/*
+.venv/
+*.egg-info/
+*.venv/
+*/.venv

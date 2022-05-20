@@ -1,5 +1,9 @@
 
 cat_vars = [
+ 'gr_account_response_code',
+ 'gr_customer_response_code', 
+ 'gr_verification_response',
+ 'fsl_source',
  'ida_bankcard_idscoreresultcode1',
  'ida_bankcard_idscoreresultcode2',
  'ida_bankcard_idscoreresultcode3',
@@ -128,7 +132,7 @@ cat_vars = [
  'tmx_raw_true_ip_organization',
  'tmx_raw_true_ip_organization_type',
  'tmx_raw_true_ip_result',
- 'tmx_raw_proxy_ip_result', 
+ 'tmx_raw_proxy_ip_result',
  'tmx_raw_true_ip_routing_type',
  'tmx_raw_turn_os_signature',
  'tmx_raw_ua_browser_alt',
@@ -140,6 +144,9 @@ cat_vars = [
 ]
 
 bool_vars = [
+ 'tcr_contact_address1_missing',
+ 'tcr_contact_address2_missing',
+ 'tcr_contact_address3_missing',
  'rr_request_status',
  'ida_namedobconfirmed',
  'ida_namessnconfirmed',
@@ -206,7 +213,7 @@ bool_vars = [
 
 categorical_vars = cat_vars + bool_vars
 
-all_date_vars = ['fd_first_decision_time',
+all_date_vars = ['time_spent_on_rates_terms','fd_first_decision_time',
  'vsd_entered_ver_time',
  'rr_created_at',
  'rr_date_first_seen',
@@ -240,7 +247,10 @@ all_date_vars = ['fd_first_decision_time',
  'tmx_raw_true_ip_last_update'
 ]
 
-numeric_vars = ['fsl_tcr_first_name_match',
+numeric_vars = [
+ 'gr_account_added_date',
+ 'time_spent_on_rates_terms',
+ 'fsl_tcr_first_name_match', 'requested_loan_amt', 'requested_loan_amount', 'claimed_mni',
  'fsl_tcr_last_name_match',
  'fsl_rr_date_first_seen',
  'fsl_rr_popularity',
@@ -702,7 +712,7 @@ numeric_vars = ['fsl_tcr_first_name_match',
  'tmx_raw_tmx_summary_reason_code_identity_spoofing',
  'tmx_raw_tmx_summary_reason_code_level_1_link_accept',
  'tmx_raw_tmx_summary_reason_code_level_1_link_reject',
-                
+
  'fsl_ts_ns_last_name_match',
  'fsl_ts_ns_name_match',
  'ida_namedobconfirmed',
@@ -778,9 +788,31 @@ numeric_vars = ['fsl_tcr_first_name_match',
  'tmx_raw_input_ip_score',
  'tmx_raw_input_ip_worst_score',
  'tmx_raw_time_zone',
- 'tmx_raw_true_ip_worst_score'
+ 'tmx_raw_true_ip_worst_score',
+
+  'ea_ipdistancekm_x', 'ea_ipdistancemil_x',
+   'tmx_raw_digital_id_trust_score_reason_code_ts_long_did_distance_x',
+   'tmx_raw_digital_id_trust_score_reason_code_ts_neutral_did_distance_x',
+   'tmx_raw_digital_id_trust_score_reason_code_ts_short_did_distance_x',
+   'tmx_raw_digital_id_trust_score_reason_code_ts_very_long_did_distance_x',
+   'tmx_raw_digital_id_trust_score_reason_code_ts_very_short_did_distance_x',
+   'ida_distancezipipaddr_x', 'ida_distancezipprimphone_x',
+   'ea_ipdistancekm_y', 'ea_ipdistancemil_y',
+   'tmx_raw_digital_id_trust_score_reason_code_ts_long_did_distance_y',
+   'tmx_raw_digital_id_trust_score_reason_code_ts_neutral_did_distance_y',
+   'tmx_raw_digital_id_trust_score_reason_code_ts_short_did_distance_y',
+   'tmx_raw_digital_id_trust_score_reason_code_ts_very_long_did_distance_y',
+   'tmx_raw_digital_id_trust_score_reason_code_ts_very_short_did_distance_y',
+   'ida_distancezipipaddr_y', 'ida_distancezipprimphone_y',
+   'tmx_ft_input_ip_true_ip_distance',
+   'tmx_ss_ft_input_ip_address_distance',
+   'tmx_ss_ft_true_ip_address_distance',
+   'ss_tcr_ft_address_phone_distance', 'tcr_tmx_ft_phone_true_ip_distance',
+   'ss_tmx_ft_address_dns_ip_distance',
+   'tcr_tmx_ft_phone_input_ip_distance',
+   'tcr_tmx_ft_phone_dns_ip_distance'
                ]
-    
+
 skip_rare_encode_vars = ['ea_domainrisklevel',
 'ea_emailexists',
 'ea_ip_risklevel',
